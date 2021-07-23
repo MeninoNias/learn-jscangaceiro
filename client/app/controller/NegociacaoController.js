@@ -3,13 +3,14 @@ class NegociacaoController{
     adcionar(event){
         event.preventDefault();
         
-        let inputData = document.querySelector('#data');
-        let inputQuantidade = document.querySelector('#quantidade');
-        let inputValor = document.querySelector('#valor');
+        let	$ = document.querySelector;
+        let	inputData =	$('#data');
+        let	inputQuantidade	= $('#quantidade');
+        let	inputValor = $('#valor');
 
-        console.log(inputData);
-        console.log(inputQuantidade);
-        console.log(inputValor);
+        console.log(inputData.value);
+        console.log(parserInt(inputQuantidade.value));
+        console.log(parseFloat(inputValor.value));
     }
 
 
