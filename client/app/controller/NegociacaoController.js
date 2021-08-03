@@ -10,11 +10,8 @@ class NegociacaoController{
     adcionar(event){
         event.preventDefault();
 
-        let	converter	=	new	DateConverter();
-        let	data	=	converter.paraData(this._inputData.value);
-        
         let negociacao = new Negociacao(
-            data,
+            DataConverter.toDate(this._inputData.value),
             parseInt(this._inputQuantidade.value),
             parseFloat(this._inputValor.value)
         );     
