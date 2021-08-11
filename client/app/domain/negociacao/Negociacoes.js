@@ -8,4 +8,8 @@ class Negociacoes{
         this._negociacoes.push(negociacao);
     }
 
+    toArray(){
+        return this._negociacoes;
+    }
+
 }
