@@ -5,7 +5,7 @@ class DataConverter{
     }
 
     static toText(date){
-        return	data.getDate() + '/' + (data.getMonth()	+ 1) + '/' + data.getFullYear();
+        return	`${date.getData()}/${date.getMonth()+1}/${date.getFullYear()}`;
     }
     static toDate(text){
         return new Date(...text.split('-').map((item, index) => item - index % 2));
