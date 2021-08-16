@@ -9,7 +9,7 @@ class Negociacoes{
     }
 
     toArray(){
-        return this._negociacoes;
+        return [].concat(this._negociacoes);
     }
 
 }
