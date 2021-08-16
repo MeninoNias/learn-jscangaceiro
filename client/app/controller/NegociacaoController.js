@@ -5,6 +5,7 @@ class NegociacaoController{
         this._inputData = $('#data');
         this._inputQuantidade = $('#quantidade');
         this._inputValor = $('#valor');
+        this._negociacoes = new Negociacoes();
     }
 
     adcionar(event){
@@ -16,7 +17,9 @@ class NegociacaoController{
             parseFloat(this._inputValor.value)
         );     
         
-        console.log(negociacao);
+        this._negociacoes.adciona(negociacao);
+
+        console.log(this._negociacoes.toArray());
     
     }
 
