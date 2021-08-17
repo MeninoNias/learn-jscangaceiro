@@ -8,7 +8,7 @@ class NegociacaoController{
         this._negociacoes = new Negociacoes();
         this._negociacoesView = new NegociacoesView('#negociacoes');
 
-        this._negociacoesView.update();
+        this._negociacoesView.update(this._negociacoes);
     }
 
     adcionar(event){
@@ -17,6 +17,7 @@ class NegociacaoController{
         let negociacao = this._createNegociacao();     
     
         this._negociacoes.adciona(negociacao);
+        this._negociacoesView.update(this._negociacoes);
         this._cleanForm();
         console.log(this._negociacoes.toArray());
     }
