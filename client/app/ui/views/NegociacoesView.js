@@ -1,4 +1,4 @@
-class NegociacoesView{
+class NegociacoesView {
 
     constructor(seletor){
         this._elemento = document.querySelector(seletor);
